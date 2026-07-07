@@ -3,7 +3,7 @@
 # basic need
 
 ```
-sudo pacman -S git base-devel kitty xorg-server xorg-xinit bat ripgrep tealdeer zoxide mpv yazi htop btop imagemagick picom firefox eza linux-headers linux-lts-headers archlinux-keyring 
+sudo pacman -S git base-devel kitty xorg-server xorg-xinit bat ripgrep tealdeer zoxide mpv yazi htop btop imagemagick picom eza linux-headers linux-lts-headers archlinux-keyring firefox nitrogen rofi nomacs flameshot
 ```
 
 # amd stuff 
