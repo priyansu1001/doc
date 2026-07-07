@@ -2,7 +2,7 @@
 
 # basic need
 
-sudo pacman -S git base-devel kitty xorg-server xorg-xinit bat ripgrep tealdeer zoxide mpv yazi htop btop imagemagick picom firefox
+sudo pacman -S git base-devel kitty xorg-server xorg-xinit bat ripgrep tealdeer zoxide mpv yazi htop btop imagemagick picom firefox eza
 
 # nvidia stuff
 sudo pacman -S nvidia-open nvidia-utils nvidia-prime nvidia-settings 
