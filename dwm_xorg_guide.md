@@ -3,7 +3,14 @@
 # basic need
 
 ```
-sudo pacman -S git base-devel kitty xorg-server xorg-xinit bat ripgrep tealdeer zoxide mpv yazi htop btop imagemagick picom firefox eza linux-headers linux-lts-headers
+sudo pacman -S git base-devel kitty xorg-server xorg-xinit bat ripgrep tealdeer zoxide mpv yazi htop btop imagemagick picom firefox eza linux-headers linux-lts-headers archlinux-keyring 
+```
+
+# amd stuff 
+
+test if lib32-mesa vulkan-radeon lib32-vulkan-radeon are needed or not
+```
+sudo pacman -S mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon
 ```
 
 # nvidia stuff
