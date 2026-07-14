@@ -14,7 +14,8 @@ station wlan0 connect 'Network'
 # basic need
 
 ```
-sudo pacman -S git base-devel kitty xorg-server xorg-xinit bat ripgrep tealdeer zoxide mpv yazi htop btop imagemagick picom eza linux-headers linux-lts-headers archlinux-keyring firefox nitrogen rofi nomacs flameshot xclip noto-fonts-cjk noto-fonts-emoji termdown```
+sudo pacman -S git base-devel kitty xorg-server xorg-xinit bat ripgrep tealdeer zoxide mpv yazi htop btop imagemagick picom eza linux-headers linux-lts-headers archlinux-keyring firefox nitrogen rofi feh flameshot xclip noto-fonts-cjk noto-fonts-emoji termdown ncdu
+```
 
 # amd stuff 
 
@@ -83,11 +84,23 @@ Finally, reboot:
 sudo reboot
 ```
 
+[!NOTE]
+> add these info also
+> https://wiki.archlinux.org/title/NVIDIA_Optimus
+> https://wiki.archlinux.org/title/PRIME#PRIME_render_offload
+
+
 # xinitrc file
 
+window manager should be at last
+one time cmds should be run without &
+
 ```
+xrandr --output Virtual-I --mode 1920x1080 -r 60
+exec ~/.fehbg &
+exec picom &
+exec dwmblocks &
 exec dwm
-picom
 ```
 
 # Autostart X at login
@@ -99,13 +112,6 @@ if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
   exec startx
 fi
 ```
-
-You can replace the `-eq` comparison with one like `-le 3` (for vt1 to vt3) if you want to use graphical logins on more than one virtual terminal.
-
-Alternative conditions to detect the virtual terminal include `"$(tty)" = "/dev/tty1"`, which does not allow comparison with `-le`, and `"$(fgconsole 2>/dev/null || echo -1)" -eq 1`, which does not work in serial consoles.
-
-The exec command ensures that the user is logged out when the X server exits, crashes or is killed by an attacker. If you want to take the risk and remain logged in when the X session ends, remove exec.
-
 
 
 # DWM keybind cheatsheet
@@ -151,3 +157,7 @@ Floating
 [Mod]+[Space]           - toggles to the previous layout mode.
 [Mod]+[Shift]+[Space]   - to make an individual window float.
 [Mod]+[M M B]           - to make an individual window un-float.
+
+
+> [!TODO]
+> make middle click scroll work for arch+dwm
