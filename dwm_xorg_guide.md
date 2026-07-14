@@ -14,16 +14,10 @@ station wlan0 connect 'Network'
 # basic need
 
 ```
-sudo pacman -S git base-devel kitty xorg-server xorg-xinit bat ripgrep tealdeer zoxide mpv yazi htop btop imagemagick picom eza linux-headers linux-lts-headers archlinux-keyring firefox nitrogen rofi feh flameshot xclip noto-fonts-cjk noto-fonts-emoji termdown ncdu
+sudo pacman -S git base-devel kitty xorg-server xorg-xinit bat ripgrep tealdeer zoxide mpv yazi htop btop imagemagick picom eza linux-headers linux-lts-headers archlinux-keyring firefox  rofi feh flameshot xclip noto-fonts-cjk noto-fonts-emoji termdown ncdu ttf-firacode-nerd thunar gvfs btop less bat 7zip starship mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon 
 ```
 
-# amd stuff 
-
-These might be installed already, ifit did, no need
-test if lib32-mesa vulkan-radeon lib32-vulkan-radeon are needed or not
-```
-sudo pacman -S mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon
-```
+test if `lib32-mesa vulkan-radeon lib32-vulkan-radeon` are needed or not
 
 # nvidia stuff
 
